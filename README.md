@@ -71,3 +71,12 @@ The total score indicating the amount of red in the tile is the sum of the "redn
 ### 3. Analyzing results
 
 coming soon...
+
+#### Original Image
+![original](./back-parking.jpg)
+
+#### Focused Image, corse-grid
+![original](./back-parking-focused-corse.jpg)
+
+#### Focused Image, fine-grid
+![focused](./back-parking-focused-fine.jpg)
