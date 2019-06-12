@@ -4,13 +4,16 @@ Sikorsky Interview Question
 Date:   June 11, 2019
 Author: Joseph Samela
 
+Run from commandline in the form:
+
 $ python main.py back-parking.jpg 5 3
+
 > `back-parking.jpg` is path to the image
 > `5` number of grid divisions, x-axis
 > `3` number of grid divisions, y-axis
 '''
 import sys
-from PIL import Image
+from PIL import Image, ImageEnhance
 
 
 def main(path, x_grid, y_grid):
@@ -31,12 +34,28 @@ def main(path, x_grid, y_grid):
     # More RED (high score) --> Less RED (low score)
     sorted_scores = sorted(scores, key=lambda tup: tup[1], reverse=True)
 
+    # Create new blank image to draw weight
+    focused_image = Image.new('RGB', (width, height))
+
     # Save tiles to ./tiles
-    for idx, tile in enumerate(sorted_scores):
+    for rank, tile in enumerate(sorted_scores):
         coord = tile[0]
         score = tile[1]
         t = img.crop(coord)
-        t.save('./tiles/{}.{}.{}.jpg'.format(idx,coord,score))
+
+        # Save tiles to ./tiles directory
+        t.save('./tiles/{}.{}.{}.jpg'.format(rank,coord,score))
+
+        # Scale tile brightness to match rank
+        brightness = 1/(rank+1) + 0.2
+        #brightness = 100/(rank+1)+0.1
+        # 0th tile contains the MOST red
+        # nth tile contains the LEAST red        
+        focused_tile = ImageEnhance.Brightness(t).enhance(brightness)
+        focused_image.paste(focused_tile, tile[0])
+
+    # Show final image focused on red cars
+    focused_image.show()
 
 
 def calc_grid(width, height, x_grid, y_grid):
