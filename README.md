@@ -7,9 +7,9 @@ Install `python3` for your distribution.
 ```
 $ sudo apt install python3
 ```
-Install required packages.
+Install required python imaging library.
 ```
-$ pip install -r requirements.txt
+$ pip install pillow --upgrade
 ```
 
 ## Usage
