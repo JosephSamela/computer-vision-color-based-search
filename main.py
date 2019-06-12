@@ -1,4 +1,14 @@
-import time
+#!/usr/bin/python
+'''
+Sikorsky Interview Question
+Date:   June 11, 2019
+Author: Joseph Samela
+
+$ python main.py back-parking.jpg 5 3
+> `back-parking.jpg` is path to the image
+> `5` number of grid divisions, x-axis
+> `3` number of grid divisions, y-axis
+'''
 import sys
 from PIL import Image
 
@@ -18,7 +28,7 @@ def main(path, x_grid, y_grid):
         scores.append((tile, score))
 
     # Sort tiles by score
-    # More RED --> Less RED
+    # More RED (high score) --> Less RED (low score)
     sorted_scores = sorted(scores, key=lambda tup: tup[1], reverse=True)
 
     # Save tiles to ./tiles
@@ -45,7 +55,7 @@ def calc_grid(width, height, x_grid, y_grid):
     # Calculate grid dimensions
     x_grid_size = width//x_grid
     y_grid_size = height//y_grid
-    # Notice // decimal component is thrown away
+    # Notice `//` the decimal component is thrown away
 
     '''
     The grid is comprised of tiles.
@@ -125,4 +135,3 @@ if __name__=='__main__':
     y_grid_div = int(sys.argv[3])
 
     main(image_path, x_grid_div, y_grid_div)
-
