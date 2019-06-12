@@ -27,7 +27,7 @@ def main(path, x_grid, y_grid):
     # Score tiles
     scores = []
     for tile in grid:
-        score = score_tile_redness(img, tile)
+        score = score_tile(img, tile)
         scores.append((tile, score))
 
     # Sort tiles by score
@@ -117,7 +117,7 @@ def calc_grid(width, height, x_grid, y_grid):
     return grid
 
 
-def score_tile_redness(img, tile):
+def score_tile(img, tile):
     '''Read image pixel-by-pixel to score the amount of red present
 
     Args:
