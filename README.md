@@ -1,5 +1,7 @@
 # sikorsky-interview-question 
 
+[Video talk-through/code explanation https://youtu.be/LGyyDVzkbr4](https://youtu.be/LGyyDVzkbr4)
+
 ## Setup
 Install `python3` for your distribution.
 ```
@@ -81,6 +83,8 @@ Sifting through the ranked tiles - the program certainly *seems* to be identifyi
 
 Each tile is darkened/brightened by its `rank`. The tiles are then re-assembled into a final image showing visually how the program focuses on red areas of the image.
 
+
+
 #### Original Image
 
 ![original](./back-parking.jpg)
@@ -92,3 +96,15 @@ Each tile is darkened/brightened by its `rank`. The tiles are then re-assembled 
 #### Focused Image, fine-grid
 
 ![focused](./back-parking-focused-fine.jpg)
+
+#### Another Image
+
+![original](./parking-lot-3.jpg)
+
+#### Another Image, coarse-grid
+
+![original](./parking-lot-3-coarse.jpg)
+
+#### Another Image, fine-grid
+
+![focused](./parking-lot-3-fine.jpg)
