@@ -1,4 +1,9 @@
-# computer-vision-color-based-search
+# Find-the-red-car 
+*computer-vision-color-based-search*
+
+Special forces mobilize! Computer vision activate! Enhance! 
+
+In this exercise I use the python imaging library to locate red cars from aerial images of parking lots. To understand the surveillance state...you must become the surveillance state! Wait, that can't be right...
 
 [Video talk-through/code explanation https://youtu.be/LGyyDVzkbr4](https://youtu.be/LGyyDVzkbr4)
 
