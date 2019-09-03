@@ -1,4 +1,4 @@
-# sikorsky-interview-question 
+# computer-vision-color-based-search
 
 [Video talk-through/code explanation https://youtu.be/LGyyDVzkbr4](https://youtu.be/LGyyDVzkbr4)
 
