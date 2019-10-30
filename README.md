@@ -5,7 +5,7 @@ Special forces mobilize! Computer vision activate! Enhance!
 
 In this exercise I use the python imaging library to locate red cars from aerial images of parking lots. To understand the surveillance state...you must become the surveillance state! Wait, that can't be right...
 
-[Video talk-through/code explanation https://youtu.be/LGyyDVzkbr4](https://youtu.be/LGyyDVzkbr4)
+<iframe width="100%" src="https://www.youtube.com/embed/LGyyDVzkbr4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Setup
 Install `python3` for your distribution.
